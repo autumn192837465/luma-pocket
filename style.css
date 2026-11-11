@@ -1,0 +1,48 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f7f6f2;
+  --surface: #ffffff;
+  --text: #1f2328;
+  --muted: #5d6470;
+  --border: #e2e0d8;
+  --accent: #2f6f62;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171a;
+    --surface: #1e2125;
+    --text: #eceef0;
+    --muted: #a6adb7;
+    --border: #33373d;
+    --accent: #7cc7b5;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Noto Sans TC", "PingFang TC", sans-serif;
+  line-height: 1.85;
+}
+main { max-width: 780px; margin: 0 auto; padding: 48px 20px 80px; }
+header.site { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; margin-bottom: 40px; font-size: .95rem; color: var(--muted); }
+header.site a.brand { font-weight: 700; color: var(--text); text-decoration: none; font-size: 1.05rem; }
+nav.links { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+h1 { font-size: 1.85rem; line-height: 1.4; margin: 0 0 12px; }
+h2 { font-size: 1.2rem; line-height: 1.5; margin: 36px 0 10px; }
+p, li { overflow-wrap: anywhere; }
+a { color: var(--accent); }
+.meta { color: var(--muted); margin: 0 0 28px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 4px 20px; }
+.card dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 16px 0; }
+.card dt { color: var(--muted); }
+.card dd { margin: 0; overflow-wrap: anywhere; }
+@media (max-width: 520px) { .card dl { grid-template-columns: 1fr; gap: 0; } .card dd { margin-bottom: 10px; } }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+hr { border: 0; border-top: 1px solid var(--border); margin: 64px 0; }
+ul.apps { list-style: none; padding: 0; }
+ul.apps li { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; }
+ul.apps strong { font-size: 1.05rem; }
+footer { margin-top: 64px; color: var(--muted); font-size: .9rem; }
